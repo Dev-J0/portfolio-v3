@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+  --color-mint-500: oklch(0.72 0.11 170);
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  --color-anti-white: #2a2d34;
+  --color-grey: #2a2d34;
+  --color-licorish: #0e0706;
+  --color-anti-black: #0d1f22;
+}
