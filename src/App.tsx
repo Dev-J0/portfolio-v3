@@ -1,4 +1,5 @@
 import Intro from './Intro';
+import videoBg from './assets/27669-365224683_tiny.mp4';
 
 export const App = () => {
   return (
@@ -11,7 +12,7 @@ export const App = () => {
         playsInline
         className="absolute top-0 left-0 h-full w-full object-cover brightness-75 saturate-50 filter"
       >
-        <source src="/27669-365224683_tiny.mp4" type="video/mp4" />
+        <source src={videoBg} type="video/mp4" />
       </video>
 
       {/* Foreground Content */}
