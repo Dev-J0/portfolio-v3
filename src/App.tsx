@@ -3,7 +3,7 @@ import videoBg from './assets/27669-365224683_tiny.mp4';
 
 export const App = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="h-screen overflow-y-auto">
       {/* Video Background */}
       <video
         autoPlay
@@ -17,7 +17,7 @@ export const App = () => {
 
       {/* Foreground Content */}
       <div className="relative flex h-full flex-col">
-        <div className="flex flex-1 items-center justify-center">
+        <div className="relative">
           <Intro />
         </div>
       </div>
