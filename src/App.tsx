@@ -1,5 +1,5 @@
 import Intro from './Intro';
-import videoBg from './assets/27669-365224683_tiny.mp4';
+import videoBg from './assets/42494-431756134_tiny.mp4';
 
 export const App = () => {
   return (

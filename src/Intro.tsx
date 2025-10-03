@@ -3,7 +3,7 @@ import Avatar from './Avatar';
 export default function Intro() {
   return (
     <div className="relative">
-      <div className="bg-licorish relative z-20 mx-auto grid w-[60rem] grid-rows-3 gap-4 text-white">
+      <div className="relative z-20 mx-auto grid w-[60rem] grid-rows-3 text-white">
         <div
           id="topContainer"
           className="col-span-full grid h-[20rem] w-[60rem] grid-cols-2 gap-4 bg-gradient-to-b from-[#18251F] via-[#0e1d1af6] to-[#12242B] p-5 sm:h-[25rem]"
@@ -66,11 +66,11 @@ export default function Intro() {
         </div>
         <div
           id="middleContainer"
-          className="h-[50rem] w-[60rem] sm:h-[25rem]"
+          className="h-[50rem] w-[60rem] bg-gradient-to-b from-[#12242B] via-[#1a3436f6] to-[#324b57b4] sm:h-[25rem]"
         ></div>
         <div
           id="bottomContainer"
-          className="h-[50rem] w-[60rem] sm:h-[25rem]"
+          className="h-[50rem] w-[60rem] bg-gradient-to-b from-[#324b57b4] via-[#213238f6] to-[#063335] sm:h-[25rem]"
         ></div>
       </div>
     </div>
