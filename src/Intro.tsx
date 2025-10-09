@@ -73,54 +73,58 @@ export default function Intro() {
         </div>
         <div
           id="middleContainer"
-          className="grid w-[60rem] grid-cols-[67%_30%] gap-4 border-2 border-purple-500 bg-gradient-to-b from-[#12242B] via-[#1a3436f6] to-[#324b57b4] sm:h-auto"
+          className="grid w-[60rem] grid-cols-[67%_30%] gap-4 border-purple-500 bg-gradient-to-b from-[#12242B] via-[#1a3436f6] to-[#324b57b4] sm:h-auto"
         >
           {/* Left Column */}
           <div id="leftContainerMiddle" className="bg-anti-white p-3">
             {/* Latest Project */}
-            <div id="project1" className="bg-anti-black mt-10 p-3">
-              <h2>Frontend skills?</h2>
-              <div className="flex space-x-4">
-                <img src="/assets/html.svg" alt="HTML" className="h-10 w-10" />
-                <img src="/assets/css.svg" alt="CSS" className="h-10 w-10" />
-                <img src="/assets/js.svg" alt="JS" className="h-10 w-10" />
-                <img
-                  src="/assets/react.svg"
-                  alt="React"
-                  className="h-10 w-10"
-                />
-                <br></br>
-                <img
-                  src="/assets/tailwind.svg"
-                  alt="Tailwind"
-                  className="h-10 w-10"
-                />
-              </div>
-            </div>
-
-            {/* Recent Projects */}
-            <div id="recentActivity" className="bg-anti-black">
-              <h1>Recent Projects</h1>
-
-              <div id="favoriteGame" className="mb-10">
-                <h1>Latest Project</h1>
-                <div>
-                  <img alt="Project screenshot" />
-                  <h4>Achievement Progress 5/5</h4>
-                  <span role="img" aria-label="trophy">
-                    🏆
-                  </span>
-                  <span role="img" aria-label="star">
-                    ⭐
-                  </span>
-                  <span role="img" aria-label="rocket">
-                    🚀
-                  </span>
-                  <button type="button">Screenshots 6</button>
+            <div id="project1" className="bg-anti-black mt-10">
+              <div className="">
+                <h2 className="h-9 bg-linear-to-r/hsl from-indigo-500 to-teal-400 p-1">
+                  Frontend skills?
+                </h2>
+                <div className="flex space-x-4 p-5">
+                  <a href="https://web.dev/html">
+                    <img
+                      src="icons8-html.svg"
+                      alt="html"
+                      className="h-13 w-13"
+                    />
+                  </a>
+                  <img src="icons8-css-96.svg" alt="" className="h-13 w-13" />
+                  <img
+                    src="icons8-javascript.svg"
+                    alt="JS"
+                    className="h-13 w-13"
+                  />
+                  <img
+                    src="icons8-react-50.png"
+                    alt="React"
+                    className="h-13 w-13"
+                  />
+                  <img
+                    src="icons8-tailwind-css.svg"
+                    alt="Tailwind"
+                    className="h-13 w-13"
+                  />
                 </div>
               </div>
-              <div id="project1" className="bg-anti-black mt-10 p-3">
-                <h2 className="bg-grey">TO DO WEATHER APP LOL</h2>
+            </div>
+            <br></br>
+            {/* Recent Projects */}
+            <h1 className="mt-5 h-9 bg-linear-to-r/hsl from-indigo-500 to-teal-400 p-1">
+              Recent Projects
+            </h1>
+            <div id="recentActivity" className="bg-anti-black">
+              <div id="project1" className="bg-anti-black p-3">
+                <h2 className="bg-grey">CV Maker in French</h2>
+                <a href="https://dev-j0.github.io/cv-app-fr/">
+                  <img
+                    className="h-30 w-50"
+                    src="Capture d’écran (642).png"
+                    alt="cvmaker"
+                  ></img>
+                </a>
                 <h3>49 hrs on the record</h3>
                 <h3>last played on oct 21</h3>
                 <div>Screenshots 9</div>
