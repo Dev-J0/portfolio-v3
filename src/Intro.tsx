@@ -76,11 +76,11 @@ export default function Intro() {
           className="grid w-[60rem] grid-cols-[67%_30%] gap-4 border-purple-500 bg-gradient-to-b from-[#12242B] via-[#1a3436f6] to-[#324b57b4] sm:h-auto"
         >
           {/* Left Column */}
-          <div id="leftContainerMiddle" className="bg-anti-white p-3">
+          <div id="leftContainerMiddle" className="bg-new p-3">
             {/* Latest Project */}
             <div id="project1" className="bg-anti-black mt-10">
               <div className="">
-                <h2 className="h-9 bg-linear-to-r/hsl from-indigo-500 to-teal-400 p-1">
+                <h2 className="from-purple to-peach mt-5 h-9 bg-linear-to-r/hsl p-1">
                   Frontend skills?
                 </h2>
                 <div className="flex space-x-4 p-5">
@@ -112,12 +112,12 @@ export default function Intro() {
             </div>
             <br></br>
             {/* Recent Projects */}
-            <h1 className="mt-5 h-9 bg-linear-to-r/hsl from-indigo-500 to-teal-400 p-1">
+            <h1 className="from-purple to-peach mt-5 h-9 bg-linear-to-r/hsl p-1">
               Recent Projects
             </h1>
             <div id="recentActivity" className="bg-anti-black">
               <div id="project1" className="bg-anti-black p-3">
-                <h2 className="bg-grey">CV Maker in French</h2>
+                <h2 className="bg-purple">CV Maker in French</h2>
                 <a href="https://dev-j0.github.io/cv-app-fr/">
                   <img
                     className="h-30 w-50"
@@ -130,13 +130,40 @@ export default function Intro() {
                 <div>Screenshots 9</div>
               </div>
               <div id="project2" className="bg-anti-black mt-10 p-3">
-                <h2>TO DO WEATHER APP LOL</h2>
+                <h2 className="bg-purple">Loop Studios</h2>
+                <a href="https://dev-j0.github.io/loop-studios/">
+                  <img
+                    className="h-30 w-50"
+                    src="Capture d’écran (643).png"
+                    alt="loopstudios"
+                  ></img>
+                </a>
                 <h3>49 hrs on the record</h3>
                 <h3>last played on oct 21</h3>
                 <div>Screenshots 9</div>
               </div>
-              <div id="project3" className="bg-anti-black mt-10 p-3">
-                <h2>TO DO WEATHER APP LOL</h2>
+              <div id="project3" className="bg-anti-black p-3">
+                <h2 className="bg-purple opacity-80">CV Maker in French</h2>
+                <a href="https://dev-j0.github.io/cv-app-fr/">
+                  <img
+                    className="h-30 w-50"
+                    src="Capture d’écran (642).png"
+                    alt="cvmaker"
+                  ></img>
+                </a>
+                <h3>49 hrs on the record</h3>
+                <h3>last played on oct 21</h3>
+                <div>Screenshots 9</div>
+              </div>
+              <div id="project4" className="bg-anti-black p-3">
+                <h2 className="bg-purple">CV Maker in French</h2>
+                <a href="https://dev-j0.github.io/cv-app-fr/">
+                  <img
+                    className="h-30 w-50"
+                    src="Capture d’écran (642).png"
+                    alt="cvmaker"
+                  ></img>
+                </a>
                 <h3>49 hrs on the record</h3>
                 <h3>last played on oct 21</h3>
                 <div>Screenshots 9</div>
@@ -145,9 +172,14 @@ export default function Intro() {
           </div>
 
           {/* Right Column */}
-          <div id="rightContainerMiddle" className="bg-amber-400 p-3">
-            <h2>Sidebar / Stats</h2>
-            {/* Put your right-side content here */}
+          <div id="rightContainerMiddle" className="bg-new p-3">
+            <h2 className="bg-purple">Currently Online</h2>
+
+            <a href="#">Skills</a>
+
+            <a href="#">Interests</a>
+
+            <a href="#">Socials</a>
           </div>
         </div>
 

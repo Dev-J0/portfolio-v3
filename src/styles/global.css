@@ -21,4 +21,12 @@
   --color-light-grey: #c1c5d7;
   --color-tan: #d7be98;
   --color-green-black: #18251f;
+  --color-new: #12242d;
+
+  /* ocean sunset palette */
+  --color-purple: #6d597a;
+  --color-peach: #eaac8b;
+  --color-pink: #b56576;
+  --color-babyblue: #355070;
+  --color-verypink: #e56b6f;
 }
