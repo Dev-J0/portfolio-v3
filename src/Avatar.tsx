@@ -1,6 +1,6 @@
 export default function Avatar() {
   return (
-    <g mask="url(#viewboxMask)" transform="translate(0, -20)">
+    <g mask="url(#viewboxMask)">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1744 1744"
@@ -9,11 +9,9 @@ export default function Avatar() {
         width="212"
         height="212"
       >
-        {/* Inject metadata using dangerouslySetInnerHTML to support XML namespaces */}
-        <metadata
-          dangerouslySetInnerHTML={{
-            __html: `
-                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        {/* Inject metadata as plain text to avoid dangerouslySetInnerHTML */}
+        <metadata>
+          {`<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         xmlns:dc="http://purl.org/dc/elements/1.1/"
                         xmlns:dcterms="http://purl.org/dc/terms/">
@@ -33,10 +31,8 @@ export default function Avatar() {
                         (https://creativecommons.org/publicdomain/zero/1.0/)
                     </dc:rights>
                     </rdf:Description>
-                </rdf:RDF>
-                `,
-          }}
-        />
+                </rdf:RDF>`}
+        </metadata>
         <mask id="viewboxMask">
           <rect
             width="1744"
