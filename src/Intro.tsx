@@ -1,13 +1,40 @@
 import Avatar from './Avatar';
 
 export default function Intro() {
+  const projects = [
+    {
+      title: 'CV Maker in French',
+      image: 'Capture d’écran (642).png',
+      link: 'https://dev-j0.github.io/cv-app-fr/',
+      hours: '49 hrs on the record',
+      lastPlayed: 'last played on Oct 21',
+      screenshots: 5,
+    },
+    {
+      title: 'Portfolio',
+      image: 'portfolio-preview.png',
+      link: 'https://dev-j0.github.io/portfolio/',
+      hours: '35 hrs on the record',
+      lastPlayed: 'last played on Sept 10',
+      screenshots: 8,
+    },
+    {
+      title: 'React Weather App',
+      image: 'weather-app.png',
+      link: 'https://dev-j0.github.io/weather-app/',
+      hours: '22 hrs on the record',
+      lastPlayed: 'last played on Aug 5',
+      screenshots: 3,
+    },
+  ];
+
   return (
     <div className="relative">
       <div className="relative z-20 mx-auto grid max-w-[60rem] text-white">
         {/* TOP CONTAINER */}
         <div
           id="topContainer"
-          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#18251F] via-[#0e1d1af6] to-[#12242B] p-5 sm:grid-cols-2 md:flex md:flex-row md:flex-wrap"
+          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#181e25] via-[#0e151df6] to-[#121f2b] p-5 sm:grid-cols-[1fr_22rem] md:grid-cols-[1fr_24rem]"
         >
           {/* LEFT SECTION */}
           <div className="relative z-10 flex flex-col items-center sm:flex-row sm:items-start sm:space-x-6">
@@ -81,22 +108,22 @@ export default function Intro() {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="z-10 mt-10 ml-auto pt-5 sm:mt-0">
+          <div className="z-10 mt-5 w-full p-5 sm:mt-0 sm:ml-10 sm:w-[22rem] md:w-[24rem]">
             <h2 className="mb-3 text-lg sm:text-xl">Level 100</h2>
-            <div className="mb-3 flex items-center">
+            <div className="bg-g rey mb-3 flex items-center p-1">
               <img
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 src="https://img.icons8.com/deco-color/96/3.png"
                 alt="3"
               />
               <div className="mr-5">
-                <h3>Years of service</h3>
+                <h3 className="mr-5">Years of service</h3>
                 <h3>550XP</h3>
               </div>
             </div>
-            <button type="button" className="">
-              EDIT Profile?
+            <button type="button" className="bg-grey h-9 w-30">
+              Edit Profile
             </button>
           </div>
         </div>
@@ -104,15 +131,15 @@ export default function Intro() {
         {/* MIDDLE CONTAINER */}
         <div
           id="middleContainer"
-          className="grid w-full grid-cols-1 gap-4 border-t border-[#0e1d1af6] bg-gradient-to-b from-[#12242B] via-[#1a3436f6] to-[#324b57b4] sm:grid-cols-[67%_30%]"
+          className="grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#181e25] via-[#1a2836f6] to-[#324b57b4] sm:grid-cols-[67%_30%]"
         >
           {/* LEFT COLUMN */}
-          <div id="leftContainerMiddle" className="bg-new p-3">
+          <div id="leftContainerMiddle" className="bg-new rounded-sm p-3">
             <div id="project1" className="bg-anti-black mt-10">
-              <h2 className="from-purple to-peach mt-5 h-9 bg-linear-to-r/hsl p-1">
+              <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
                 Frontend skills?
               </h2>
-              <div className="flex flex-wrap gap-4 p-5">
+              <div className="flex flex-wrap gap-4 border-none p-5">
                 <a href="https://web.dev/html">
                   <img src="icons8-html.svg" alt="HTML" className="h-13 w-13" />
                 </a>
@@ -136,36 +163,36 @@ export default function Intro() {
             </div>
 
             {/* RECENT PROJECTS */}
-            <h1 className="from-purple to-peach mt-5 h-9 bg-linear-to-r/hsl p-1">
-              Recent Projects
-            </h1>
-
             <div id="recentActivity" className="bg-anti-black">
-              {[1, 2, 3, 4].map((num) => (
+              <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
+                Recent Projects
+              </h2>
+              {projects.map((project) => (
                 <div
-                  key={num}
-                  id={`project${num}`}
-                  className="bg-anti-black mt-10 p-3"
+                  key={project.title}
+                  className="bg-anti-black mt-5 border border-[#425264c4] p-1 opacity-90 transition-all duration-300 hover:opacity-100"
                 >
-                  <h2 className="bg-purple opacity-90">CV Maker in French</h2>
-                  <a href="https://dev-j0.github.io/cv-app-fr/">
+                  <h2 className="opacity-90">{project.title}</h2>
+                  <a href={project.link}>
                     <img
                       className="h-30 w-full sm:w-50"
-                      src="Capture d’écran (642).png"
-                      alt="cvmaker"
+                      src={project.image}
+                      alt={project.title}
                     />
                   </a>
-                  <h3>49 hrs on the record</h3>
-                  <h3>last played on oct 21</h3>
-                  <div>Screenshots 9</div>
+                  <div>
+                    <h3>{project.hours}</h3>
+                    <h3>{project.lastPlayed}</h3>
+                    <div>Screenshots {project.screenshots}</div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* RIGHT COLUMN */}
-          <div id="rightContainerMiddle" className="bg-new p-3">
-            <h2 className="bg-purple">Currently Online</h2>
+          <div id="rightContainerMiddle" className="bg-new rounded-sm p-3">
+            <h2 className="mb-10">Currently Online</h2>
             <nav className="flex flex-col space-y-2">
               <a href="#">Skills</a>
               <a href="#">Interests</a>
@@ -177,7 +204,7 @@ export default function Intro() {
         {/* BOTTOM CONTAINER */}
         <div
           id="bottomContainer"
-          className="h-[30rem] w-full border-t border-[#1a3436f6] bg-gradient-to-b from-[#324b57b4] via-[#213238f6] to-[#063335] sm:h-[25rem]"
+          className="h-[30rem] w-full border-none bg-gradient-to-b from-[#324b57b4] via-[#213238f6] to-[#063335] sm:h-[25rem]"
         ></div>
       </div>
     </div>
