@@ -7,46 +7,46 @@ export default function Intro() {
         {/* TOP CONTAINER */}
         <div
           id="topContainer"
-          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#18251F] via-[#0e1d1af6] to-[#12242B] p-5 sm:grid-cols-2 md:flex md:grid-rows-2 md:flex-row md:flex-wrap"
+          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#18251F] via-[#0e1d1af6] to-[#12242B] p-5 sm:grid-cols-2 md:flex md:flex-row md:flex-wrap"
         >
           {/* LEFT SECTION */}
-          <div className="relative z-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <div className="relative flex flex-col items-start justify-start">
-              <div className="relative mt-4">
-                <Avatar />
-                <svg
-                  viewBox="0 0 230 230"
-                  className="absolute top-[-10px] left-[-10px] hidden h-[230px] w-[230px] sm:block md:h-[250px] md:w-[250px]"
+          <div className="relative z-10 flex flex-col items-center sm:flex-row sm:items-start sm:space-x-6">
+            {/* AVATAR + FRAME */}
+            <div className="relative mt-4">
+              <Avatar />
+              <svg
+                viewBox="0 0 230 230"
+                className="absolute top-[-10px] left-[-10px] hidden h-[230px] w-[230px] sm:block md:h-[250px] md:w-[250px]"
+              >
+                <rect
+                  x="6"
+                  y="6"
+                  width="200"
+                  height="200"
+                  rx="0"
+                  ry="0"
+                  fill="none"
+                  stroke="#355070"
+                  strokeWidth="10"
                 >
-                  <rect
-                    x="9"
-                    y=""
-                    width="200"
-                    height="200"
-                    rx="0"
-                    ry="0"
-                    fill="none"
-                    stroke="#3A606E"
-                    strokeWidth="5"
-                  >
-                    <animate
-                      attributeName="stroke-width"
-                      values="5;15;5"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="1;0.5;1"
-                      dur="2s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                </svg>
-              </div>
+                  <animate
+                    attributeName="stroke-width"
+                    values="5;15;5"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName=""
+                    values="1;0.5;1"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+              </svg>
             </div>
 
-            <div className="w-full p-5 sm:w-[20rem]">
+            {/* NICKNAME + BIO */}
+            <div className="mt-4 w-full p-5 sm:mt-0 sm:w-[20rem]">
               <div className="flex flex-row items-center justify-start">
                 <h1 className="pb-2 text-xl sm:text-2xl">Dev-J0</h1>
                 <button id="nicknameButton" className="ml-2" type="button">
@@ -54,20 +54,46 @@ export default function Intro() {
                 </button>
               </div>
               <h4 className="text-sm sm:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                recusandae nesciunt veniam ipsa reiciendis tenetur debitis vero
-                at sequi saepe.
+                Just a dev who enjoys turning ideas into interactive
+                experiences. Coffee, code, and creativity ~ that's the routine.
+                <div className="flex-direction-row mt-2 ml-25 flex gap-9">
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/laces/64/espresso-cup.png"
+                    alt="espresso-cup"
+                  />
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/tiny-glyph/32/code.png"
+                    alt="code"
+                  />
+                  <img
+                    width="30"
+                    height="30"
+                    src="https://img.icons8.com/ios/50/creativity.png"
+                    alt="creativity"
+                  />
+                </div>
               </h4>
             </div>
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="z-10 mt-5 sm:mt-0 sm:ml-10">
-            <h2 className="text-lg sm:text-xl">Level 100</h2>
-            <div>
-              <img src="" alt="years of service icon" />
-              <h3>Developer - Years of service</h3>
-              <h3>550XP</h3>
+          <div className="z-10 mt-10 ml-auto pt-5 sm:mt-0">
+            <h2 className="mb-3 text-lg sm:text-xl">Level 100</h2>
+            <div className="mb-3 flex items-center">
+              <img
+                width="60"
+                height="60"
+                src="https://img.icons8.com/deco-color/96/3.png"
+                alt="3"
+              />
+              <div className="mr-5">
+                <h3>Years of service</h3>
+                <h3>550XP</h3>
+              </div>
             </div>
             <button type="button" className="">
               EDIT Profile?
