@@ -11,11 +11,11 @@ export default function Intro() {
       screenshots: 5,
     },
     {
-      title: 'Portfolio',
-      image: 'portfolio-preview.png',
-      link: 'https://dev-j0.github.io/portfolio/',
+      title: 'Shopify Store, password=password',
+      image: 'dist/Capture d’écran (652).png',
+      link: 'https://verdura-haven.myshopify.com/',
       hours: '35 hrs on the record',
-      lastPlayed: 'last played on Sept 10',
+      lastPlayed: 'last played on 18 Oct',
       screenshots: 8,
     },
     {
