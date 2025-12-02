@@ -3,28 +3,28 @@ import Avatar from './Avatar';
 export default function Intro() {
   const projects = [
     {
-      title: 'CV Maker in French',
-      image: 'Capture d’écran (642).png',
-      link: 'https://dev-j0.github.io/cv-app-fr/',
-      hours: '49 hrs on the record',
-      lastPlayed: 'last played on Oct 21',
-      screenshots: 5,
-    },
-    {
-      title: 'Shopify Store, password=password',
+      title: 'Shopify Store',
       image: 'dist/Capture d’écran (652).png',
       link: 'https://verdura-haven.myshopify.com/',
-      hours: '35 hrs on the record',
+      tech: 'Shopify, Liquid, CSS (Dawn Theme modified)',
       lastPlayed: 'last played on 18 Oct',
       screenshots: 8,
     },
     {
-      title: 'React Weather App',
-      image: 'weather-app.png',
-      link: 'https://dev-j0.github.io/weather-app/',
-      hours: '22 hrs on the record',
-      lastPlayed: 'last played on Aug 5',
+      title: 'Salt & Static',
+      image: 'dist/Capture d’écran (659).png',
+      link: 'https://dev-j0.github.io/restaurant/ ',
+      tech: 'Webpack, JS, CSS,',
+      lastPlayed: 'last played on 28 Nov',
       screenshots: 3,
+    },
+    {
+      title: 'CV Maker in French',
+      image: 'Capture d’écran (642).png',
+      link: 'https://dev-j0.github.io/cv-app-fr/',
+      tech: 'React',
+      lastPlayed: 'last played on Oct 21',
+      screenshots: 5,
     },
   ];
 
@@ -34,7 +34,7 @@ export default function Intro() {
         {/* TOP CONTAINER */}
         <div
           id="topContainer"
-          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#181e25] via-[#0e151df6] to-[#121f2b] p-5 sm:grid-cols-[1fr_22rem] md:grid-cols-[1fr_24rem]"
+          className="col-span-full grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#181e25] via-[#0e151dc7] to-[#121f2b] p-5 sm:grid-cols-[1fr_22rem] md:grid-cols-[1fr_24rem]"
         >
           {/* LEFT SECTION */}
           <div className="relative z-10 flex flex-col items-center sm:flex-row sm:items-start sm:space-x-6">
@@ -131,10 +131,13 @@ export default function Intro() {
         {/* MIDDLE CONTAINER */}
         <div
           id="middleContainer"
-          className="grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#181e25] via-[#1a2836f6] to-[#324b57b4] sm:grid-cols-[67%_30%]"
+          className="grid w-full grid-cols-1 gap-4 bg-gradient-to-b from-[#121f2b] via-[#0e151df6] to-[#324b57b4] sm:grid-cols-[67%_30%]"
         >
           {/* LEFT COLUMN */}
-          <div id="leftContainerMiddle" className="bg-new rounded-sm p-3">
+          <div
+            id="leftContainerMiddle"
+            className="rounded-sm bg-[#122133cb] p-3"
+          >
             <div id="project1" className="bg-anti-black mt-10">
               <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
                 Frontend skills?
@@ -165,23 +168,23 @@ export default function Intro() {
             {/* RECENT PROJECTS */}
             <div id="recentActivity" className="bg-anti-black">
               <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
-                Recent Projects
+                Recent Activity
               </h2>
               {projects.map((project) => (
                 <div
                   key={project.title}
-                  className="bg-anti-black mt-5 border border-[#425264c4] p-1 opacity-90 transition-all duration-300 hover:opacity-100"
+                  className="mt-5 border border-[#4252649f] bg-[#161a1fde] p-1 opacity-75 transition-all duration-300 hover:opacity-100"
                 >
                   <h2 className="opacity-90">{project.title}</h2>
                   <a href={project.link}>
                     <img
-                      className="h-30 w-full sm:w-50"
+                      className="mb-5 h-40 w-full sm:w-60"
                       src={project.image}
                       alt={project.title}
                     />
                   </a>
-                  <div>
-                    <h3>{project.hours}</h3>
+                  <div className="bg-[#2620387e] p-5">
+                    <h3>{project.tech}</h3>
                     <h3>{project.lastPlayed}</h3>
                     <div>Screenshots {project.screenshots}</div>
                   </div>
@@ -191,7 +194,7 @@ export default function Intro() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div id="rightContainerMiddle" className="bg-new rounded-sm p-3">
+          <div id="rightContainerMiddle" className="bg-[#122133cb] p-3">
             <h2 className="mb-10">Currently Online</h2>
             <nav className="flex flex-col space-y-2">
               <a href="#">Skills</a>
@@ -204,7 +207,7 @@ export default function Intro() {
         {/* BOTTOM CONTAINER */}
         <div
           id="bottomContainer"
-          className="h-[30rem] w-full border-none bg-gradient-to-b from-[#324b57b4] via-[#213238f6] to-[#063335] sm:h-[25rem]"
+          className="h-[5rem] w-full border-none bg-gradient-to-b from-[#181e25] via-[#0e151db6] to-[#121f2b] sm:h-[25rem]"
         ></div>
       </div>
     </div>

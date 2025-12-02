@@ -1,26 +1,28 @@
 import Intro from './Intro';
 import videoBg from './assets/42494-431756134_tiny.mp4';
+import Footer from './Footer';
 
 export const App = () => {
   return (
-    <div className="h-screen overflow-y-auto">
-      {/* Video Background */}
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
+      {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 h-full w-full object-cover brightness-75 saturate-50 filter"
+        className="fixed top-0 left-0 -z-10 h-screen w-screen object-cover brightness-75 saturate-50 filter"
       >
         <source src={videoBg} type="video/mp4" />
       </video>
 
-      {/* Foreground Content */}
-      <div className="relative flex h-full flex-col">
-        <div className="relative">
-          <Intro />
-        </div>
-      </div>
+      {/* Main Content */}
+      <main className="flex-1 overflow-y-auto">
+        <Intro />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
