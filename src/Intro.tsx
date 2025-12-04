@@ -1,31 +1,69 @@
 import Avatar from './Avatar';
+import shopify from './assets/projects/pic2.png';
+import salt from './assets/projects/pic4.png';
+import { useState } from 'react';
+import cv from './assets/projects/pic1.png';
+import oldportfolio from './assets/projects/pic5.png';
 
 export default function Intro() {
+  const [showSkills, setShowSkills] = useState(false);
+
   const projects = [
     {
       title: 'Shopify Store',
-      image: 'dist/Capture d’écran (652).png',
-      link: 'https://verdura-haven.myshopify.com/',
+      image: shopify,
+      src: 'https://verdura-haven.myshopify.com/',
       tech: 'Shopify, Liquid, CSS (Dawn Theme modified)',
       lastPlayed: 'last played on 18 Oct',
       screenshots: 8,
     },
     {
       title: 'Salt & Static',
-      image: 'dist/Capture d’écran (659).png',
-      link: 'https://dev-j0.github.io/restaurant/ ',
-      tech: 'Webpack, JS, CSS,',
+      image: salt,
+      link: 'https://dev-j0.github.io/restaurant/',
+      tech: 'Webpack, JS, CSS',
       lastPlayed: 'last played on 28 Nov',
       screenshots: 3,
     },
     {
       title: 'CV Maker in French',
-      image: 'Capture d’écran (642).png',
+      image: cv,
       link: 'https://dev-j0.github.io/cv-app-fr/',
       tech: 'React',
       lastPlayed: 'last played on Oct 21',
       screenshots: 5,
     },
+    {
+      title: 'Old Portfolio',
+      image: oldportfolio,
+      link: 'https://dev-j0.github.io/portfolio/',
+      tech: 'HTML, CSS, JavaScript',
+      lastPlayed: 'last played on Jan 10',
+      screenshots: 5,
+    },
+  ];
+
+  const skills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Tailwind',
+    //'TypeScript',
+    'Shopify / Liquid',
+    'Responsive Web Design',
+    'UX / UI Design',
+    'Git / GitHub',
+    'Problem-Solving & Troubleshooting',
+    'Bug Reporting & Reproduction',
+    'Manual Testing',
+    'Debugging in DevTools',
+    'API integration',
+    'Webpack / Vite',
+    'VSCode & its extensions for productivity',
+    'SEO basics',
+    'Ticketing programs',
+    'Agile/Scrum concepts',
   ];
 
   return (
@@ -82,7 +120,10 @@ export default function Intro() {
               </div>
               <h4 className="text-sm sm:text-base">
                 Just a dev who enjoys turning ideas into interactive
-                experiences. Coffee, code, and creativity ~ that's the routine.
+                experiences. Coffee, code, and creativity ➾ that's the routine.
+                Experienced in building responsive websites, Shopify
+                development, and custom theme creation, blending design, UX, and
+                functionality seamlessly.
                 <div className="flex-direction-row mt-2 ml-25 flex gap-9">
                   <img
                     width="30"
@@ -136,7 +177,7 @@ export default function Intro() {
           {/* LEFT COLUMN */}
           <div
             id="leftContainerMiddle"
-            className="rounded-sm bg-[#122133cb] p-3"
+            className="mb-5 rounded-sm bg-[#122133cb] p-3"
           >
             <div id="project1" className="bg-anti-black mt-10">
               <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
@@ -183,7 +224,7 @@ export default function Intro() {
                       alt={project.title}
                     />
                   </a>
-                  <div className="bg-[#2620387e] p-5">
+                  <div id="proj" className="bg-[#2620387e] p-5">
                     <h3>{project.tech}</h3>
                     <h3>{project.lastPlayed}</h3>
                     <div>Screenshots {project.screenshots}</div>
@@ -194,12 +235,31 @@ export default function Intro() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div id="rightContainerMiddle" className="bg-[#122133cb] p-3">
-            <h2 className="mb-10">Currently Online</h2>
+          <div className="mb-5 rounded-sm bg-[#122133cb] p-3">
+            <h2 className="mb-6 text-lg sm:text-xl">Currently Online</h2>
             <nav className="flex flex-col space-y-2">
-              <a href="#">Skills</a>
-              <a href="#">Interests</a>
-              <a href="#">Socials</a>
+              <button
+                type="button"
+                onClick={() => setShowSkills(!showSkills)}
+                className="rounded bg-[#05223f00] px-4 py-2 text-left text-white transition-colors hover:bg-[#09131d50]"
+              >
+                Skills {showSkills}
+              </button>
+
+              {showSkills && (
+                <ul className="mt-2 ml-4 list-none space-y-1 text-left text-sm text-white sm:text-base">
+                  {skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              )}
+
+              <a href="#" className="text-white hover:underline">
+                Interests
+              </a>
+              <a href="#" className="text-white hover:underline">
+                Socials
+              </a>
             </nav>
           </div>
         </div>
@@ -207,7 +267,7 @@ export default function Intro() {
         {/* BOTTOM CONTAINER */}
         <div
           id="bottomContainer"
-          className="h-[5rem] w-full border-none bg-gradient-to-b from-[#181e25] via-[#0e151db6] to-[#121f2b] sm:h-[25rem]"
+          className="w-full border-none bg-gradient-to-b from-[#181e25] via-[#0e151db6] to-[#121f2b] sm:h-[5rem]"
         ></div>
       </div>
     </div>
