@@ -7,6 +7,8 @@ import oldportfolio from './assets/projects/pic5.png';
 
 export default function Intro() {
   const [showSkills, setShowSkills] = useState(false);
+  const [showInterests, setShowInterests] = useState(false);
+  const [showSocials, setShowSocials] = useState(false);
 
   const projects = [
     {
@@ -15,7 +17,7 @@ export default function Intro() {
       src: 'https://verdura-haven.myshopify.com/',
       tech: 'Shopify, Liquid, CSS (Dawn Theme modified)',
       lastPlayed: 'last played on 18 Oct',
-      screenshots: 8,
+      //   screenshots: 8,
     },
     {
       title: 'Salt & Static',
@@ -23,7 +25,7 @@ export default function Intro() {
       link: 'https://dev-j0.github.io/restaurant/',
       tech: 'Webpack, JS, CSS',
       lastPlayed: 'last played on 28 Nov',
-      screenshots: 3,
+      //   screenshots: 3,
     },
     {
       title: 'CV Maker in French',
@@ -31,7 +33,7 @@ export default function Intro() {
       link: 'https://dev-j0.github.io/cv-app-fr/',
       tech: 'React',
       lastPlayed: 'last played on Oct 21',
-      screenshots: 5,
+      //    screenshots: 5,
     },
     {
       title: 'Old Portfolio',
@@ -39,7 +41,7 @@ export default function Intro() {
       link: 'https://dev-j0.github.io/portfolio/',
       tech: 'HTML, CSS, JavaScript',
       lastPlayed: 'last played on Jan 10',
-      screenshots: 5,
+      //      screenshots: 5,
     },
   ];
 
@@ -49,6 +51,7 @@ export default function Intro() {
     'JavaScript',
     'React',
     'Tailwind',
+    'TypeScript',
     //'TypeScript',
     'Shopify / Liquid',
     'Responsive Web Design',
@@ -64,6 +67,56 @@ export default function Intro() {
     'SEO basics',
     'Ticketing programs',
     'Agile/Scrum concepts',
+    'Multitasking',
+  ];
+
+  const interests = [
+    'Technology',
+    'Music',
+    'Cinema',
+    'Literature',
+    'Gaming',
+    'Painting/Sketching',
+    'Writing',
+    'Traveling',
+    'Pets',
+    'Learning new tools/AI',
+    'Photography',
+    'Nature walks',
+    'Cooking',
+  ];
+
+  const socials = [
+    {
+      name: '',
+      url: 'https://github.com/dev-j0',
+      icon: 'https://img.icons8.com/?size=100&id=lkh3AbJLmFpp&format=png&color=000000',
+    },
+    /*     {
+      name: '',
+      url: 'https://www.linkedin.com/in/dev-j0',
+      icon: 'https://img.icons8.com/?size=100&id=lMUZwFHycz7a&format=png&color=000000',
+    }, */
+    {
+      name: '',
+      url: 'https://koalendar.com/e/meet-with-jo-dev',
+      icon: 'https://img.icons8.com/?size=100&id=c4lRcgWsD7QD&format=png&color=000000',
+    },
+    {
+      name: '',
+      url: 'mailto:its-jo-dev@proton.me',
+      icon: 'https://img.icons8.com/?size=100&id=5als4XX1qxTa&format=png&color=000000',
+    },
+    {
+      name: '',
+      url: 'https://www.openstreetmap.org/relation/3792883#map=5/40.20/11.25',
+      icon: 'https://img.icons8.com/?size=100&id=FlVkohBw6iLx&format=png&color=000000',
+    },
+    {
+      name: '',
+      url: 'https://discord.com/users/dev_j0',
+      icon: 'https://img.icons8.com/?size=100&id=oiy2sWxAnP31&format=png&color=000000',
+    },
   ];
 
   return (
@@ -163,9 +216,9 @@ export default function Intro() {
                 <h3>550XP</h3>
               </div>
             </div>
-            <button type="button" className="bg-grey h-9 w-30">
+            {/*   <button type="button" className="bg-grey h-9 w-30">
               Edit Profile
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -181,7 +234,7 @@ export default function Intro() {
           >
             <div id="project1" className="bg-anti-black mt-10">
               <h2 className="from-purple to-peach c mt-5 h-9 rounded-t-md bg-linear-to-r/hsl p-1">
-                Frontend skills?
+                Frontend stack
               </h2>
               <div className="flex flex-wrap gap-4 border-none p-5">
                 <a href="https://web.dev/html">
@@ -194,15 +247,38 @@ export default function Intro() {
                   className="h-13 w-13"
                 />
                 <img
+                  src="https://img.icons8.com/?size=100&id=uSHYbs6PJfMT&format=png&color=000000"
+                  alt="Shopify"
+                  className="h-13 w-13"
+                />
+                <img
                   src="icons8-react-50.png"
                   alt="React"
                   className="h-13 w-13"
                 />
+
                 <img
                   src="icons8-tailwind-css.svg"
                   alt="Tailwind"
                   className="h-13 w-13"
                 />
+                <img
+                  src="https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000"
+                  alt="Typescript"
+                  className="h-13 w-13"
+                />
+                <img
+                  src="https://img.icons8.com/?size=100&id=dJjTWMogzFzg&format=png&color=000000"
+                  alt="Vite"
+                  className="h-13 w-13"
+                />
+                <a href="https://webpack.js.org/">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=QjbHx7WUskg1&format=png&color=000000"
+                    alt="Webpack"
+                    className="h-13 w-13"
+                  />
+                </a>
               </div>
             </div>
 
@@ -227,7 +303,7 @@ export default function Intro() {
                   <div id="proj" className="bg-[#2620387e] p-5">
                     <h3>{project.tech}</h3>
                     <h3>{project.lastPlayed}</h3>
-                    <div>Screenshots {project.screenshots}</div>
+                    {/* <div>Screenshots {project.screenshots}</div> */}
                   </div>
                 </div>
               ))}
@@ -245,21 +321,59 @@ export default function Intro() {
               >
                 Skills {showSkills}
               </button>
-
               {showSkills && (
-                <ul className="mt-2 ml-4 list-none space-y-1 text-left text-sm text-white sm:text-base">
+                <ul className="mt-2 ml-4 space-y-1 text-left text-sm text-white sm:text-base">
                   {skills.map((skill) => (
                     <li key={skill}>{skill}</li>
                   ))}
                 </ul>
               )}
+              <button
+                type="button"
+                onClick={() => setShowInterests(!showInterests)}
+                className="rounded bg-[#05223f00] px-4 py-2 text-left text-white transition-colors hover:bg-[#09131d50]"
+              >
+                Interests {showInterests}
+              </button>
+              {showInterests && (
+                <ul className="mt-2 ml-4 space-y-1 text-left text-sm text-white sm:text-base">
+                  {interests.map((interest) => (
+                    <li key={interest}>{interest}</li>
+                  ))}
+                </ul>
+              )}
+              <button
+                type="button"
+                onClick={() => setShowSocials(!showSocials)}
+                className="rounded bg-[#05223f00] px-4 py-2 text-left text-white transition-colors hover:bg-[#09131d50]"
+              >
+                Get in touch {showSocials}
+              </button>
 
-              <a href="#" className="text-white hover:underline">
-                Interests
-              </a>
-              <a href="#" className="text-white hover:underline">
-                Socials
-              </a>
+              {showSocials && (
+                <ul
+                  id="socials"
+                  className="mt-2 ml-4 space-y-2 text-left text-sm text-white sm:text-base"
+                >
+                  {socials.map((social) => (
+                    <li key={social.name}>
+                      <a
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 opacity-80 transition-all hover:opacity-100"
+                      >
+                        <img
+                          src={social.icon}
+                          alt={`${social.name} icon`}
+                          className="h-15 w-15"
+                        />
+                        <span className="hover:underline">{social.name}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </nav>
           </div>
         </div>

@@ -37,3 +37,12 @@ html {
   --color-babyblue: #355070;
   --color-verypink: #e56b6f;
 }
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+#socials > li {
+  list-style: none;
+}
