@@ -14,7 +14,7 @@ export default function Intro() {
     {
       title: 'Shopify Store',
       image: shopify,
-      src: 'https://verdura-haven.myshopify.com/',
+      link: 'https://verdura-haven.myshopify.com/',
       tech: 'Shopify, Liquid, CSS (Dawn Theme modified)',
       lastPlayed: 'last played on 18 Oct',
       //   screenshots: 8,

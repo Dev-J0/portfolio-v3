@@ -8,7 +8,7 @@ export const Navbar = () => {
       <div className="mx-auto px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="relative grid grid-cols-2 items-center lg:grid-cols-3">
           {/* Left links */}
-          <ul className="flex hidden items-center space-x-8 lg:flex">
+          <ul className="flex items-center space-x-8 lg:flex">
             <li>
               <a
                 href="#"
